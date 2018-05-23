@@ -42,7 +42,7 @@ func TestAtomicReplace(t *testing.T) {
 	}
 
 	for _, cse := range cases {
-		count, output := stringutil.AtomicReplace(cse.input, cse.replacements)
+		output, count := gostrings.AtomicReplace(cse.input, cse.replacements)
 		assert.EqualValues(t, cse.output, output, "output must match")
 		assert.EqualValues(t, cse.count, count, "count must match")
 	}
