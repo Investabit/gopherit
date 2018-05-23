@@ -5,7 +5,7 @@ package gostrings
 // instances which occur after replacing other substrings.
 func AtomicReplace(
 	input string, replacements map[string]string,
-) (count map[string]int, output string) {
+) (output string, count map[string]int) {
 	count = map[string]int{}
 	output = ""
 

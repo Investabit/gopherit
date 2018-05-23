@@ -3,7 +3,7 @@ package gostrings_test
 import (
 	"testing"
 
-	"github.com/Investabit/investabit-go/stringutil"
+	"github.com/Investabit/gopherit/gostrings"
 	"github.com/stretchr/testify/assert"
 )
 

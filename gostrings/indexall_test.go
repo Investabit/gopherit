@@ -3,7 +3,7 @@ package gostrings_test
 import (
 	"testing"
 
-	"github.com/Investabit/investabit-go/stringutil"
+	"github.com/Investabit/gopherit/gostrings"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -41,7 +41,7 @@ func TestIndexAll(t *testing.T) {
 	}
 
 	for _, cse := range cases {
-		result := stringutil.IndexAll(cse.input, cse.substr)
+		result := gostrings.IndexAll(cse.input, cse.substr)
 		assert.EqualValues(t, cse.indices, result, "indices must match")
 	}
 }
