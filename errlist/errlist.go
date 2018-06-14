@@ -79,9 +79,11 @@ func (el *ErrList) String() string {
 
 	output := "Multiple errors:\n"
 
-	for i, err := range *el {
+	for _, err := range *el {
 		msg := err.Error()
 		output += "-" + msg + "\n"
 	}
+
+	return output
 
 }
