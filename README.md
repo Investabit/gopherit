@@ -46,7 +46,7 @@ MapKeys reports a slice of strings for any map of type `map[string]` or
 valid. This function panics if a map with an invalid key type is passed.
 
 Example
-```
+```go
 uniqueNames := map[string]struct{}{}
 uniqueNames["one"] = struct{}{}
 uniqueNames["two"] = struct{}{}
@@ -61,7 +61,7 @@ Package goerr provides a constructor for errors that implement both `error` and
 `fmt.Stringer`. This can be useful for reporting errors with detailed messages.
 
 Example
-```
+```go
 data, err := body.ReadAll()
 if err != nil {
     err = goerr.New(err, fmt.Sprintf(
