@@ -19,7 +19,7 @@ func TestMapKeys(t *testing.T) {
 		testA["one"] = struct{}{}
 		testA["two"] = struct{}{}
 
-		keys := MapKeys(testA)
+		keys := MapKeyStrings(testA)
 		if len(keys) != 2 {
 			t.Error("incorrect number of keys reported")
 		}
@@ -34,7 +34,7 @@ func TestMapKeys(t *testing.T) {
 		testB[BasicStringer{1}] = struct{}{}
 		testB[BasicStringer{2}] = struct{}{}
 
-		keys := MapKeys(testB)
+		keys := MapKeyStrings(testB)
 		if len(keys) != 2 {
 			t.Error("incorrect number of keys reported")
 		}

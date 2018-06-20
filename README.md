@@ -39,7 +39,10 @@ Developer beware: these functions directly oppose Go's ideology of verbose
 easy-to-understand source code.
 
 #### MapKeys
-MapKeys reports a slice of strings for any map of type `map[string]` or
+(coming soon)
+
+#### MapKeyStrings
+MapKeyStrings reports a slice of strings for any map of type `map[string]` or
 `map[fmt.Stringer]`. Any type of key that implements `fmt.Stringer` is also
 valid. This function panics if a map with an invalid key type is passed.
 
@@ -50,7 +53,7 @@ uniqueNames["one"] = struct{}{}
 uniqueNames["two"] = struct{}{}
 
 var keys []string
-keys = MapKeys(uniqueNames)
+keys = MapKeyStrings(uniqueNames)
 fmt.Println(keys) // [one two]
 ```
 

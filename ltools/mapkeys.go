@@ -5,8 +5,8 @@ import (
 	"reflect"
 )
 
-// MapKeys reports a slice of map keys as strings.
-func MapKeys(mapToGetKeysFrom interface{}) (keys []string) {
+// MapKeyStrings reports a slice of map keys as strings.
+func MapKeyStrings(mapToGetKeysFrom interface{}) (keys []string) {
 	keys = []string{}
 	mapType := reflect.TypeOf(mapToGetKeysFrom)
 	mapKeyType := mapType.Key()
