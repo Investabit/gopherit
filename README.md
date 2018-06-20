@@ -32,6 +32,30 @@ for _, datum := range data {
 return errs.Get() // reports nil when no error occurs
 ```
 
+### Package ltools
+Package ltools provides utility functions to make Go programming less redundant.
+Tools here may use reflection and type assertions to provide functionality that
+would be seen more commonly in other languages.
+
+Developer beware: these functions directly oppose Go's ideology of verbose
+easy-to-understand source code.
+
+#### MapKeys
+MapKeys reports a slice of strings for any map of type `map[string]` or
+`map[fmt.Stringer]`. Any type of key that implements `fmt.Stringer` is also
+valid. This function panics if a map with an invalid key type is passed.
+
+Example
+```
+uniqueNames := map[string]struct{}{}
+uniqueNames["one"] = struct{}{}
+uniqueNames["two"] = struct{}{}
+
+var keys []string
+keys = MapKeys(uniqueNames)
+fmt.Println(keys) // [one two]
+```
+
 ### Package goerr
 Package goerr provides a constructor for errors that implement both `error` and
 `fmt.Stringer`. This can be useful for reporting errors with detailed messages.
