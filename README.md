@@ -1,8 +1,6 @@
 # GopherIt!
 
-GopherIt is a collection of convenient utilities for gophers. While there's no
-documentation here, there are documentation comments in the source code written
-with GoDoc in mind.
+GopherIt is a collection of convenient utilities for gophers.
 
 ## Featured Utilities
 
